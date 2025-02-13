@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.app.pfic.dto.EmployeeResponce;
 import com.app.pfic.exception.CaseMismatchException;
+import com.app.pfic.exception.UserNotFoundException;
+import com.app.pfic.exception.WrongUsernameException;
 
 
 @RestControllerAdvice
@@ -24,5 +26,22 @@ public class GolbalException {
 		return new ResponseEntity<EmployeeResponce>(ur, HttpStatus.BAD_REQUEST);
 	}
 	
+	@ExceptionHandler(WrongUsernameException.class)
+	public ResponseEntity<EmployeeResponce> wrongusernae(WrongUsernameException wm)
+	{
+		String message= wm.getMessage();
+		EmployeeResponce ur = new EmployeeResponce(message, new Date());
+		return new ResponseEntity<EmployeeResponce>(ur,HttpStatus.BAD_REQUEST);
+		
+	}
+	
+	@ExceptionHandler(UserNotFoundException.class)
+	public ResponseEntity<EmployeeResponce> usernotfound(UserNotFoundException wm)
+	{
+		String message= wm.getMessage();
+		EmployeeResponce ur = new EmployeeResponce(message, new Date());
+		return new ResponseEntity<EmployeeResponce>(ur,HttpStatus.BAD_REQUEST);
+		
+	}
 	
 }

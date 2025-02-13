@@ -6,4 +6,6 @@ public interface EmployeeServiceI {
 
 	public Employee saveemp(Employee e) throws Exception;
 
+	public Employee getUser(int id);
+
 }

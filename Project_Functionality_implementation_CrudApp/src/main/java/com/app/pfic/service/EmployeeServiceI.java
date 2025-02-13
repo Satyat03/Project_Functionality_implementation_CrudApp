@@ -8,4 +8,8 @@ public interface EmployeeServiceI {
 
 	public Employee getUser(int id);
 
+	public String deleteAllData() throws Exception;
+
+	public Employee updateEmployeeData(Employee employee, int id) throws Exception;
+
 }

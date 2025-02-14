@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import com.app.pfic.dto.EmployeeResponce;
 import com.app.pfic.exception.CaseMismatchException;
 import com.app.pfic.exception.UserNotFoundException;
+import com.app.pfic.exception.WrongPasswordException;
 import com.app.pfic.exception.WrongUsernameException;
 
 
@@ -43,5 +44,17 @@ public class GolbalException {
 		return new ResponseEntity<EmployeeResponce>(ur,HttpStatus.BAD_REQUEST);
 		
 	}
+	
+	
+	@ExceptionHandler(WrongPasswordException.class)
+	public ResponseEntity<EmployeeResponce> wrongpassword(WrongPasswordException wr)
+	{
+		String message= wr.getMessage();
+		EmployeeResponce ur=new EmployeeResponce(message, new Date());
+		return new ResponseEntity<EmployeeResponce>(ur,HttpStatus.BAD_REQUEST);
+		
+	}
+	
+	
 	
 }

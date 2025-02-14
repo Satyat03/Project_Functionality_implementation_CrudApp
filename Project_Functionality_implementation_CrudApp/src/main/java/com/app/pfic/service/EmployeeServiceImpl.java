@@ -35,8 +35,6 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 		if (e.getUsername() == null || !e.getUsername().endsWith("@gmail.com")) {
             throw new WrongUsernameException("Username must end with @gmail.com and cannot be null.");
         }
-		
-		
 	
 		if(e.getPancard() == null || !e.getPancard().matches(pannumber))
 		{

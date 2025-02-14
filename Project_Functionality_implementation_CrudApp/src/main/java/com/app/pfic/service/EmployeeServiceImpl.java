@@ -1,11 +1,15 @@
 package com.app.pfic.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.app.pfic.exception.CaseMismatchException;
+import com.app.pfic.exception.CustomeException;
+import com.app.pfic.exception.InvalidAdharCardException;
+import com.app.pfic.exception.InvalidAdharCardException;
 import com.app.pfic.exception.UserNotFoundException;
 import com.app.pfic.exception.WrongUsernameException;
 import com.app.pfic.model.Employee;
@@ -30,7 +34,12 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 		if (e.getUsername() == null || !e.getUsername().endsWith("@gmail.com")) {
             throw new WrongUsernameException("Username must end with @gmail.com and cannot be null.");
         }
-		
+		if(e.getAddress()== null ) {
+			throw new  CustomeException("Address Compulsory !!");
+		}
+		if (e.getAdharcard() == null || e.getAdharcard().length() != 12 || !e.getAdharcard().matches("[0-9]+")) {
+            throw new InvalidAdharCardException("Invalid Aadhar card number: " + e.getAdharcard());
+        }
 		return er.save(e);
 	}
 
@@ -46,6 +55,14 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
             throw new UserNotFoundException("USER NOT FOUND FOR THE ID: " + id);
         }
     }
+
+
+
+	@Override
+	public List<Employee> getAllEmployee() {
+		List<Employee> list = er.findAll();
+		return list;
+	}
 		
 
 }

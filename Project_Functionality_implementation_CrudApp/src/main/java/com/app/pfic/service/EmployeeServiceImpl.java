@@ -13,9 +13,10 @@ import com.app.pfic.exception.InvalidAdharCardException;
 
 
 import com.app.pfic.exception.DataMismatchException;
+import com.app.pfic.exception.IncorrectMobileNumberException;
 import com.app.pfic.exception.InvaliPancardNumberException;
 import com.app.pfic.exception.NoDataFoundException;
-
+import com.app.pfic.exception.NoRecordFoundException;
 import com.app.pfic.exception.UserNotFoundException;
 import com.app.pfic.exception.WrongUsernameException;
 import com.app.pfic.model.Employee;
@@ -34,6 +35,8 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 	public Employee saveemp(Employee e) throws Exception {
 		
 		String pannumber="^[A-Z]{3}[0-9]{4}[A-Z]{1}$";
+		
+		String mblno= String.valueOf(e.getMobno());
 		
 		if (e.getName() == null || !e.getName().equals(e.getName().toUpperCase())) {
             throw new CaseMismatchException("Fullname must be in uppercase and cannot be null.");
@@ -57,8 +60,12 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 			
 		}
 	
-		
-	
+		if(mblno.length()!=10)
+		{
+			throw new IncorrectMobileNumberException("Please enter 10 digit correct mobile number");
+			
+			
+		}
 
 		return er.save(e);
 	
@@ -117,6 +124,8 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 	{
 		Optional<Employee> op =er.findById(id);
 		
+		String mbn= String.valueOf(employee.getMobno());
+		
 			if(op.isPresent())
 				
 			{
@@ -139,28 +148,71 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 					
 					e.setUsername(employee.getUsername());
 				}
+				
+				if(mbn!=null)
+				{
+					e.setMobno(employee.getMobno());
+					
+					
+				}
+				
+				if(employee.getAdharcard()!=null)
+				{
+					
+					
+					e.setAdharcard(employee.getAdharcard());
+				}
+				if(employee.getPancard()!=null)
+				{
+					
+					e.setPancard(employee.getPancard());
+					
+				}
+				
 				if(employee.getPassword()!=null)
 				{
 					
 					e.setPassword(employee.getPassword());
 					
 				}
-				else
-				{
-					throw new DataMismatchException("Please enter data carefully");
-					
-				}
-			
-			
-			
-			
+				
+					er.save(e);
 			
 			}
+			else
+			{
+				throw new DataMismatchException("Please enter data carefully");
+				
+			}
+			
+		
+			return null;
 		
 		
+	}
+
+
+
+	@Override
+	public String deleteSingleRecord(int id) throws Exception 
+	{
+		Optional<Employee> op=er.findById(id);
 		
-		return null;
+				if(op.isPresent())
+				{
+					
+					er.deleteById(id);
+					
+				}
+				else
+				{
+					throw new NoRecordFoundException("this id is not present so cannot delete");
+	
+				}	
+				
+				return "success";
+				
 	}
 		
-
+			
 }

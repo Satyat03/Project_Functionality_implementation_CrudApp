@@ -15,4 +15,6 @@ public interface EmployeeServiceI {
 
 	public Employee updateEmployeeData(Employee employee, int id) throws Exception;
 
+	public String deleteSingleRecord(int id) throws Exception;
+
 }

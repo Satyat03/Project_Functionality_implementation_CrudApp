@@ -11,5 +11,8 @@ public interface EmployeeServiceI {
 	public Employee getUser(int id);
 
 	public List<Employee> getAllEmployee();
+	public String deleteAllData() throws Exception;
+
+	public Employee updateEmployeeData(Employee employee, int id) throws Exception;
 
 }

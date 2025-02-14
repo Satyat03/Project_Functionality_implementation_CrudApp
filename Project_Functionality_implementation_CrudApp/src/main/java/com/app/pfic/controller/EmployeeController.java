@@ -17,8 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.pfic.model.Employee;
 import com.app.pfic.service.EmployeeServiceI;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/emp")
+@Slf4j
 public class EmployeeController {
 	
 	@Autowired
@@ -28,19 +31,32 @@ public class EmployeeController {
 	@PostMapping("/save")
 	public ResponseEntity<Employee> addUser(@RequestBody Employee e) throws Exception
 	{
+		log.warn("this is warn log");
+		log.debug("this is debug log");
+		log.info("this is info log");
+		log.error("this is error log");
 		Employee e1= esi.saveemp(e);
 		return new ResponseEntity<Employee>(e1,HttpStatus.CREATED);
+		
 	}
 	
 	@GetMapping("/getUser/{id}")
 	public ResponseEntity<Employee> getsingleuser(@PathVariable int id)
 	{
+		log.warn("this is warn log");
+		log.debug("this is debug log");
+		log.info("this is info log");
+		log.error("this is error log");
 		Employee u= esi.getUser(id);
 		return new ResponseEntity<Employee>(u,HttpStatus.ACCEPTED);
 		
 	}
 	@GetMapping("/getAll")
 	public ResponseEntity<List<Employee>> getAllEmployee(){
+		log.warn("this is warn log");
+		log.debug("this is debug log");
+		log.info("this is info log");
+		log.error("this is error log");
 	List<Employee> emp=	esi.getAllEmployee();
 		return new ResponseEntity<List<Employee>>(emp,HttpStatus.OK);
 		
@@ -49,6 +65,10 @@ public class EmployeeController {
 	@DeleteMapping("/delete")
 	public ResponseEntity<String> deleteAll() throws Exception
 	{
+		log.warn("this is warn log");
+		log.debug("this is debug log");
+		log.info("this is info log");
+		log.error("this is error log");
 		String message=esi.deleteAllData();
 		
 		return new ResponseEntity<String>("All Data Deleted",HttpStatus.ACCEPTED);
@@ -57,6 +77,10 @@ public class EmployeeController {
 	@PutMapping("/update/{id}")
 	public ResponseEntity<Employee> updateData(@RequestBody Employee employee, @PathVariable("id") int id) throws Exception
 	{
+		log.warn("this is warn log");
+		log.debug("this is debug log");
+		log.info("this is info log");
+		log.error("this is error log");
 		Employee emp=esi.updateEmployeeData(employee, id);
 		
 		return new ResponseEntity<Employee>(emp, HttpStatus.OK);

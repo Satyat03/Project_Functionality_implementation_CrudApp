@@ -17,6 +17,7 @@ import com.app.pfic.exception.InvaliPancardNumberException;
 import com.app.pfic.exception.NoDataFoundException;
 
 import com.app.pfic.exception.UserNotFoundException;
+import com.app.pfic.exception.WrongPasswordException;
 import com.app.pfic.exception.WrongUsernameException;
 import com.app.pfic.model.Employee;
 import com.app.pfic.repo.EmployeeRepo;
@@ -53,10 +54,12 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 		if(e.getPancard() == null || !e.getPancard().matches(pannumber))
 		{
 			throw new InvaliPancardNumberException("The PAN card number should have uppercase alphabets and numbers.");
-			
-			
 		}
 	
+		if (e.getPassword() == null || !e.getPassword().matches("^(?=.*[!@#$%^&*()\\[\\]{}\\\\|;:'\",.<>/?]).{8,}$")) {
+            throw new WrongPasswordException("Password must contain at least 8 characters, including one special character.");
+        }
+
 		
 	
 

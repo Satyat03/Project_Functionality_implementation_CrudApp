@@ -2,6 +2,7 @@ package com.app.pfic.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -41,7 +42,7 @@ public class EmployeeController {
 	}
 	
 	@GetMapping("/getUser/{id}")
-	public ResponseEntity<Employee> getsingleuser(@PathVariable int id)
+	public ResponseEntity<Employee> getsingleuser(@PathVariable ("id") int id)
 	{
 		log.warn("this is warn log");
 		log.debug("this is debug log");
@@ -88,7 +89,13 @@ public class EmployeeController {
 		
 	}
 	
-	
+	@DeleteMapping("/deleteby/{id}")
+	public ResponseEntity<String> deleteSingle(@PathVariable ("id") int id) throws Exception
+	{
+		String srt=esi.deleteSingleRecord(id);
+		
+		return new ResponseEntity<String>("Single Record Deleted",HttpStatus.ACCEPTED);
+	}
 	
 	
 	

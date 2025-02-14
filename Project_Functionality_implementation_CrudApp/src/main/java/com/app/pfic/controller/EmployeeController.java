@@ -3,9 +3,11 @@ package com.app.pfic.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,10 +38,23 @@ public class EmployeeController {
 		
 	}
 	
+	@DeleteMapping("/delete")
+	public ResponseEntity<String> deleteAll() throws Exception
+	{
+		String message=esi.deleteAllData();
+		
+		return new ResponseEntity<String>("All Data Deleted",HttpStatus.ACCEPTED);
+	}
 	
-	
-	
-	
+	@PutMapping("/update/{id}")
+	public ResponseEntity<Employee> updateData(@RequestBody Employee employee, @PathVariable("id") int id) throws Exception
+	{
+		Employee emp=esi.updateEmployeeData(employee, id);
+		
+		return new ResponseEntity<Employee>(emp, HttpStatus.OK);
+		
+		
+	}
 	
 	
 	

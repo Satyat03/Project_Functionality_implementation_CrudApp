@@ -1,5 +1,7 @@
 package com.app.pfic.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,6 +37,12 @@ public class EmployeeController {
 	{
 		Employee u= esi.getUser(id);
 		return new ResponseEntity<Employee>(u,HttpStatus.ACCEPTED);
+		
+	}
+	@GetMapping("/getAll")
+	public ResponseEntity<List<Employee>> getAllEmployee(){
+	List<Employee> emp=	esi.getAllEmployee();
+		return new ResponseEntity<List<Employee>>(emp,HttpStatus.OK);
 		
 	}
 	

@@ -1,0 +1,77 @@
+2025-02-15T11:30:56.817+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] ionalityImplementationCrudAppApplication : Starting ProjectFunctionalityImplementationCrudAppApplication using Java 21.0.5 with PID 9060 (C:\Users\Satyat Kuila\git\Project_Functionality_implementation_CrudApp\Project_Functionality_implementation_CrudApp\target\classes started by Satyat Kuila in C:\Users\Satyat Kuila\git\Project_Functionality_implementation_CrudApp\Project_Functionality_implementation_CrudApp)
+2025-02-15T11:30:56.825+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] ionalityImplementationCrudAppApplication : No active profile set, falling back to 1 default profile: "default"
+2025-02-15T11:30:56.887+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-15T11:30:56.888+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-15T11:30:58.076+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-15T11:30:58.150+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2025-02-15T11:30:58.797+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-02-15T11:30:58.815+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-15T11:30:58.816+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-15T11:30:58.891+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-15T11:30:58.891+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2003 ms
+2025-02-15T11:30:59.100+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-15T11:30:59.195+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-15T11:30:59.251+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-15T11:30:59.690+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-15T11:30:59.743+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-15T11:31:00.300+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@233cb75
+2025-02-15T11:31:00.304+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-15T11:31:00.401+05:30  WARN 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-15T11:31:00.403+05:30  WARN 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-15T11:31:00.439+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-15T11:31:01.551+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-15T11:31:01.764+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-15T11:31:02.202+05:30  WARN 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-15T11:31:02.685+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-15T11:31:02.748+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2025-02-15T11:31:02.759+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] ionalityImplementationCrudAppApplication : Started ProjectFunctionalityImplementationCrudAppApplication in 6.52 seconds (process running for 7.486)
+2025-02-15T11:31:40.282+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-15T11:31:40.283+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-15T11:31:40.288+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-02-15T11:31:40.358+05:30  WARN 9060 --- [Project_Functionality_implementation_CrudApp] [http-nio-9090-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-02-15T11:32:05.029+05:30 ERROR 9060 --- [Project_Functionality_implementation_CrudApp] [http-nio-9090-exec-3] c.a.pfic.controller.EmployeeController   : this is error log
+2025-02-15T11:32:13.252+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-15T11:32:13.257+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-15T11:32:13.281+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-15T11:32:13.287+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-15T11:32:13.292+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-15T11:32:13.304+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-15T11:32:13.399+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] ionalityImplementationCrudAppApplication : Starting ProjectFunctionalityImplementationCrudAppApplication using Java 21.0.5 with PID 9060 (C:\Users\Satyat Kuila\git\Project_Functionality_implementation_CrudApp\Project_Functionality_implementation_CrudApp\target\classes started by Satyat Kuila in C:\Users\Satyat Kuila\git\Project_Functionality_implementation_CrudApp\Project_Functionality_implementation_CrudApp)
+2025-02-15T11:32:13.399+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] ionalityImplementationCrudAppApplication : No active profile set, falling back to 1 default profile: "default"
+2025-02-15T11:32:13.661+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-15T11:32:13.676+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2025-02-15T11:32:13.819+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-02-15T11:32:13.821+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-15T11:32:13.822+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-15T11:32:13.855+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-15T11:32:13.855+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 451 ms
+2025-02-15T11:32:13.917+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-15T11:32:13.921+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-15T11:32:13.940+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-15T11:32:13.941+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-02-15T11:32:13.969+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@204152ed
+2025-02-15T11:32:13.970+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-02-15T11:32:13.971+05:30  WARN 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-15T11:32:13.972+05:30  WARN 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-15T11:32:13.972+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-15T11:32:14.024+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-15T11:32:14.047+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-15T11:32:14.147+05:30  WARN 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-15T11:32:14.308+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-15T11:32:14.327+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2025-02-15T11:32:14.331+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] ionalityImplementationCrudAppApplication : Started ProjectFunctionalityImplementationCrudAppApplication in 0.971 seconds (process running for 79.059)
+2025-02-15T11:32:14.334+05:30  INFO 9060 --- [Project_Functionality_implementation_CrudApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

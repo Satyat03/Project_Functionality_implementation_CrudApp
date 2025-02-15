@@ -92,9 +92,13 @@ public class EmployeeController {
 	@DeleteMapping("/deleteby/{id}")
 	public ResponseEntity<String> deleteSingle(@PathVariable ("id") int id) throws Exception
 	{
+		log.warn("this is warn log");
+		log.debug("this is debug log");
+		log.info("this is info log");
+		log.error("this is error log");
 		String srt=esi.deleteSingleRecord(id);
 		
-		return new ResponseEntity<String>("Single Record Deleted",HttpStatus.ACCEPTED);
+		return new ResponseEntity<String>("Single Record Deleted "+srt,HttpStatus.ACCEPTED);
 	}
 	
 	

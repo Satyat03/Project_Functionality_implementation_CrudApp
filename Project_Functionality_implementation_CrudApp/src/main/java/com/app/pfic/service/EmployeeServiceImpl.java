@@ -187,14 +187,12 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 					er.save(e);
 			
 			}
-			else
-			{
+		{
 				throw new DataMismatchException("Please enter data carefully");
 				
 			}
 			
 		
-			return null;
 		
 		
 	}
